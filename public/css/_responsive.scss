@@ -1,0 +1,328 @@
+@media (min-width: 1200px){
+  .container-xl, .container-lg, .container-md, .container-sm, .container {
+      max-width: 94%;
+  }
+}
+@media (max-width: 1170px) {
+  .container-lg, .container-md, .container-sm, .container {
+      max-width: 94rem;
+  }
+  .flexGrid{
+    .col6{
+        width: 19%;
+        max-width: 19%;
+    }
+  }
+}
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1020px) {
+  .headerWrap{
+    .brand-logo{
+      flex: 120px 0 0;
+    }
+    .header-Navigation{
+      top: 8px;
+      ul{
+        li{
+          margin-right: 10px;
+          display: inline-block;
+          a{
+            font-size: 13.88px;            
+          }
+        }
+      }
+    }
+    .right-header{
+      top: 8px;
+      flex: 100px 0 0;
+      ul{
+        li{
+          height: 40px;
+          width: 40px;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+// ============== START CODE FOR HOME PAGE HERE =========================
+  .getStartedHome{
+    margin-top: -60px;
+    background-color:$white;
+    padding-bottom:60px;
+  }
+// ============== END CODE FOR HOME PAGE HERE ===========================
+}
+@media (max-width: 768px){
+  .container-md, .container-sm, .container {
+      max-width: 94rem;
+  }
+  .scrollCntWrap{
+    .flexGrid{
+      flex-flow: nowrap;
+      .col6{
+        min-width: 200px;
+      }
+    }
+  }
+  .offersBoxGrid, .infoGrid{
+    justify-content: flex-start;
+    flex-flow: nowrap;
+    a, .item{
+      min-width: 240px;
+    }
+  }
+}
+@media (max-width: 760px) {
+  // ========= start code for header here ================
+  .headerWrap{
+      .toggleHeaderNav{
+        display: block;
+      }
+      .brand-logo{
+        flex: 110px 0 0;
+      }
+      .header-Navigation{
+        display: none;
+        position: fixed;
+        top: 115px;
+        width: 100%;
+        background-color: $white;
+        left: 0;
+        z-index: 99;
+        height: 96vh;
+        padding-top: 30px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin-left: 0;
+        ul{
+          > li{
+            width: 100%;
+            display: block;
+            > a{
+              border-bottom: 1px solid $silver;
+              padding-left: 15px;
+              display:block;
+              width: 100%;
+              &:after{
+                height: 0;
+                background-color:transparent;
+              }
+            }
+            > .megaMenu{
+                position: relative;
+                top: 0;
+                padding:0 0 15px 15px;
+                height: 50vh;
+                overflow: auto;
+                > ul{
+                  li{
+                    width: 45%;
+                    margin-top: 15px;
+                    margin-top: 5px;
+                    span{
+                      font-size: 13.22px;
+                    }
+                    ul{
+                      margin-top: 0;
+                      margin-bottom: 20px;
+                    }
+                  }
+                }
+              }
+              &:hover{
+                .megaMenu{                  
+                  display:block;
+                }
+              }
+            }
+        }
+      }
+      .right-header{
+        top: 5px;
+        flex: 2 0 0;
+        > ul{
+          > li{
+            height: 40px;
+            width: 40px;
+            margin-left: 5px;
+          }
+        }
+      }
+  }
+  .showSearchHeader{
+      .search-header-wrap{
+        right: -16px;
+        width: 320px;
+        padding:30px 15px 60px 15px;
+    }
+  }
+  .dropDownAccount{
+     .ddmenuWrap{
+      left: -99px;
+     }
+  }
+//  =========== end code for header ===============
+// ============== START CODE FOR HOME PAGE HERE =========================
+  .getStartedHome{
+    margin-top: -60px;
+    background-color:$white;
+    padding-bottom:60px;
+  }
+// ============== END CODE FOR HOME PAGE HERE ===========================
+  .flexGrid .col6{
+      width: 32.25%;
+      max-width: 32.5%;
+  }
+}
+@media (max-width: 480px) {
+// ============== START CODE FOR TYPOGRAYPHY HERE =======================
+  section{
+    padding-top:30px;
+    padding-bottom:30px;
+  }
+  h2{
+  }
+  h3,
+  .pageHeading{
+    font-size: 24.33px;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+  }
+  h4{
+    font-size: 18.22px;
+  }
+  h5{
+    font-weight: 500;
+    font-size: 16.33px;
+  }
+  h6{
+    font-size: 13.88px;
+    letter-spacing: 0.011em;
+    small{
+      font-size: 12.88px;
+
+    }
+  }
+  .bold{
+    font-weight: 500;
+  }
+  .pageSubHeading{
+    font-size: 13.88px;
+    letter-spacing: 0.011em;
+  }
+  p{
+    line-height: 1.4;
+    small{
+      font-size: 12.22px;
+    }
+  }
+  .text-uppercase{
+    text-transform: uppercase;
+  }
+  .text-left{
+    text-align: left;
+  }
+  .text-center{
+    text-align: center;
+  }
+  .text-right{
+    text-align: right;
+  }
+  .close-time{
+    position:absolute;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 11.22px;
+    letter-spacing: 0.033em;
+    text-transform: uppercase;
+    cursor: pointer;
+    right: 0;
+  }
+// ============== END CODE FOR TYPOGRAYPHY HERE =========================
+// ============== START CODE FOR HOME PAGE HERE =========================
+  .getStartedHome{
+    margin-top: -40px;
+    background-color:$white;
+    padding-bottom:60px;
+  }
+  .typewrite{
+    span{
+      height: 48px;
+      line-height: 44px;
+      font-size: 44px;
+    }
+  }
+// ============== END CODE FOR HOME PAGE HERE ===========================
+  .groupButtonSet{
+    li{
+      a{
+        font-size: 13.33px;
+        padding:15px;
+      }
+    }
+  } 
+  .tabsButtonSet{
+    li{
+      font-size: 13.33px;
+    }
+  }
+  .listButton{
+    .linkBtn{
+        font-size: 13.33px;
+        padding:15px;
+    }
+  }
+  .catTabListDisp{
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    a{
+      padding:12px 15px;
+      font-size: 13.33px;
+    }    
+  }
+  .scrollCntWrap{
+    .flexGrid{
+      .col6{
+        min-width: 150px;
+      }
+    }
+  }
+  .pdpDesc{
+    padding-left:0;
+  }
+}
+@media (max-width: 480px) {
+  .keyCategoryList{
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .topHeader{    
+    .topHeaderCnt{
+      grid-gap:0;
+      grid-template-columns:repeat(2, 1fr);
+      .headerOfferNav{
+          grid-row:2 / 3;
+          grid-column: 1 /3;
+          text-align: center;
+          border-top:1px solid rgba($gray, .25);
+          padding-top:5px;
+          padding-bottom:10px;
+      }
+    }
+  }
+  .subHeader{
+    margin-top: 5px;
+    .searchWrap, .catMenuWrap{
+      width: 100%;
+    }
+    .catMenuWrap{
+      border:0;
+      border-top:1px solid rgba($gray, .25);
+    }
+  }
+  .flexGrid .col6{
+      width: 47.5%;
+      max-width: 47.5%;
+  }
+}

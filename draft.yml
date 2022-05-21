@@ -1,0 +1,16 @@
+models:
+  FaqCategory:
+    name: string:100
+    status: nullable string:50
+
+  Faq:
+    title: string:100
+    answer: longtext
+    faq_category_id: id foreign:FaqCategory
+
+  RequestCallBack:
+    name: string:100
+    phone: string:100
+    status: nullable string:50
+    
+seeders: Faq, FaqCategory

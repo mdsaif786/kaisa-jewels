@@ -1,0 +1,439 @@
+@import 'theme';
+@import "flexboxgrid";
+@import 'base';
+@import 'slick';
+@import 'form';
+//==========  start code for home page here  =======================
+.heroHome{
+  padding-bottom: 0;
+}
+.heroHomeSwipe{
+  text-align: center;
+  overflow: hidden;
+  position:relative;
+  z-index: 9;
+  margin-top: 0.5rem;
+}
+.scrollCntWrap{
+  display: inline-block;
+  width: 100%;
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+    background: transparent;
+  }
+}
+
+
+.itemDisp{
+  article{
+    display: inline-flex;
+    flex-direction: column;
+    word-break: break-word;
+    .titleLink{
+      padding:10px 0;
+      height: 45px;
+      overflow: hidden;
+      width: 94%;
+      display: block;
+      font-size: 13px;
+      font-weight: 400;
+    }    
+  }
+}
+.priceAttr{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items:center;
+  width: 94%;
+  margin-bottom: 5px;
+  font-size: 13px;
+  span{
+    &.hlgt{
+      font-size: 20.22px;
+      font-weight: 600;
+    }
+  }
+}
+.ratingAttr{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .starRatings{
+    u{
+      text-decoration: none;
+    }
+    i{
+      display: inline-block;
+      position: relative;
+      height: 10px;
+      width: 10px;
+      text-align: center;
+      overflow: hidden;
+      &:after{
+        content: '\2605';
+        left: 0;
+        top: -6px;
+        color: $gray;
+      }
+      &.active{
+        &:after{
+          color: $orange;
+        }
+      }
+    }
+  }
+  small{
+    font-size: 12px;
+    margin-left: 5px;
+  }
+}
+.imgTxt{
+  position:relative;
+  span{
+    position:absolute;
+    text-indent: -9999px;
+  }
+}
+.flexGrid{
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 0 0 -.5rem;
+  justify-content: flex-start;
+  .col6{
+      margin: 0 0 0 .5rem;
+      width: 15.88%;
+      max-width: 15.88%;
+      article{
+        display: flex;
+      }
+  }
+}
+.productGrid{
+    article{
+      margin:10px 0 20px 0;
+    }
+}
+.lrItemSwipe{
+  article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    .litem{
+      width: 28%;
+    }
+    .ritem{
+      width: 70%;
+    }
+  }
+}
+
+.offersBoxGrid{
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 0 0 -1rem;
+  justify-content: center;
+  align-items:center;
+  a{
+      margin: 0 0 0 1rem;
+      width: 280px;
+      border:1px solid rgba($gray, .25);
+      padding:30px;
+      position:relative;
+      z-index: 2;      
+      text-align: center;
+      display: flex;
+      align-items:center;
+      justify-content: center;
+      flex-flow: row wrap;
+      transition: all .25s ease;
+      &:before{
+        z-index: 1;
+        height: calc(100% - 6px);
+        width: calc(100% + 2px);
+        border:1px solid rgba($gray, .25);
+        left: 3px;
+        top: 3px;
+      }
+      span{
+        display: block;
+        width: 100%;
+        font-size: 16.66px;
+        &:last-child{
+          font-weight: 500;
+          font-size: 13px;
+          text-transform: uppercase;
+          position:relative;
+          text-decoration: underline;
+        }
+      }
+      &:hover{
+        border-color:$gray;
+        &:before{
+          border-color:$gray;
+        }
+      }
+  }
+}
+.infoGrid{
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 0 0 -1rem;
+  justify-content: flex-start;
+  .item{
+      margin: 0 0 0 1rem;
+      width: 260px;
+      padding:20px 0;
+      h5{
+        margin-top: 15px;
+      }
+  }
+}
+.darkBox{
+  background:$base;
+  color: $white;
+  padding:30px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  h3{
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  h5{
+    margin: 5px 0;
+  }
+  span{
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+  &:hover{
+    color: $gray;
+  }
+}
+//==========  end code for home page here  =========================
+//----------  start code for blog section here  --------------------
+.blogArticle{
+  position: relative;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  h5{
+    font-size: 12px;
+    font-weight: 300;
+    color: $gray;
+    text-transform: uppercase;
+    margin-top: 5px;
+    letter-spacing: 0.25px;
+    a{
+      font-weight: 300;      
+      color: $gray;
+      text-decoration: none;
+    }
+  }
+  h6{
+    font-weight: 400;
+    margin: 10px 0;
+  }
+  a{
+    font-weight: 500;
+    font-size: 13px;
+    text-decoration: underline;
+  }
+}
+.icon-quote{
+  height: 60px;
+  width: 60px;
+  background:rgba($gray, .5);
+  color: $white;
+  font-size:66.66px;
+  border-radius:50%;
+  margin: 20px 0;
+  display: inline-block;
+  font-family: serif;
+  line-height: 88px;
+  position:relative;
+  &:before{
+    height: 120%;
+    width: 120%;
+    border-radius:50%;
+    border:1px solid rgba($gray, .5);
+    left: -10%;
+    top: -10%;
+  }
+}
+//----------  end code for blog section here  ----------------------
+//==========  end code for home page here  =========================
+//==========  start code for PDP page here  =================
+.pdpDesc{
+  padding-left:50px;
+  .priceAttr{
+    width: 90%;
+  }
+}
+.inListBtn{
+  display: flex;
+  flex-flow: row wrap;
+  li{
+    margin-right: 8px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
+.linkBtn{
+  font-weight: 500;
+  display: inline-block;
+  padding: 10px 0;
+  position:relative;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 13px;
+  &:after{
+    width: 0;
+    height: 1px;
+    background:$base;
+    bottom:8px;
+  }
+  &.active{
+    &:after{
+      width: 100%;
+    }
+  }
+}
+.toggleCnt{
+  padding:10px 0;
+  display: none;
+  &.active{
+    display: block;
+  }
+}
+.buyAttrInfo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:center;
+  text-align:center;
+  .quntyWrap{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    border:1px solid $silver;
+    border-radius:3px;
+    button{
+      width: 100%;
+      height: 40px;
+      background:$white;
+      padding:0;
+      border:0;
+    }
+    input{
+      width: 100%;
+      height: 40px;
+      border:0;
+      background:$white;      
+      font-weight: 600;
+      line-height: 36px;
+      border-left:1px solid $silver;
+      border-right:1px solid $silver;
+      padding:0 5px;
+    }
+  }
+  button{
+    width: 35%;
+    margin-left: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    height: 40px;
+    line-height: 1;
+    border-radius:4px;
+    border:1px solid $silver;
+    background:$white;
+    padding:0 10px;
+    i{
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      background:$base;
+      position:relative;
+    }
+    span{
+      font-size: 12px;
+      font-weight: 400;
+      display: block;
+      width: 100%;
+
+    }
+  }
+}
+.productShare{
+  display: flex;
+  flex-flow:row wrap;
+  align-items:center;
+  margin: 5px 0;
+  li{
+    margin-right: 6px;
+    a{
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      height: 36px;
+      width: 36px;
+      border:1px solid $silver;
+      border-radius:50%;
+      i{
+        height: 100%;
+        width: 100%;
+        display: block;
+        background:$base;
+      }
+      &:hover{
+        background:$base;
+        i{
+          background:$white;
+        }
+      }
+      span{
+        text-indent: -9999px;
+      }
+    }
+  }
+}
+.comboWrap{
+  display: flex;
+  flex-direction: row;
+  article{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    margin:10px 10px 10px 0;
+    position:relative;
+    border:1px dashed $gray;
+    padding:10px;
+    cursor: pointer;
+    &:last-child{
+      margin-right: 0;
+    }
+    &.active{
+      border:1px dashed $base;
+    }
+  }
+}
+//==========  end code for PDP page here  ===================
+@import 'responsive';

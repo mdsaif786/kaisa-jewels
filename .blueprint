@@ -1,0 +1,11 @@
+created:
+    - database/migrations/2020_08_04_123508_create_business_with_us_table.php
+    - app/businessWithUs.php
+    - database/factories/BusinessWithUsFactory.php
+models:
+    FaqCategory: { name: 'string:100', status: 'nullable string:50' }
+    Faq: { title: 'string:100', answer: longtext, faq_category_id: 'id foreign:FaqCategory' }
+    RequestCallBack: { name: 'string:100', phone: 'string:100', status: 'nullable string:50' }
+    BecomeEducator: { full_name: 'string:100', email: 'string:50', mobile: 'string:100', gender: 'nullable string:100', highest_qualification: 'nullable string:100', dob: 'nullable string:100', experience_year: 'nullable string:100', experience_month: 'nullable string:100', current_occupation: 'nullable string:100', resume_file: 'nullable string:255', status: 'nullable string:255' }
+    ContactUs: { full_name: 'string:100', email: 'string:50', mobile: 'string:100', message: longtext, status: 'nullable string:255' }
+    businessWithUs: { full_name: 'string:100', email: 'string:50', mobile: 'string:100', message: longtext, city_name: 'nullable string:255', company_name: 'nullable string:255', status: 'nullable string:255' }

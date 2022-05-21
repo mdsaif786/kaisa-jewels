@@ -1,0 +1,9 @@
+models:
+  businessWithUs :
+    full_name: string:100
+    email: string:50
+    mobile: string:100
+    message: longtext
+    city_name: nullable string:255
+    company_name: nullable string:255
+    status: nullable string:255

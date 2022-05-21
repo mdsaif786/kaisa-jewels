@@ -1,0 +1,628 @@
+::-webkit-input-placeholder {
+  color: $gray;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+:-ms-input-placeholder {
+  color: $gray;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+::placeholder {
+  color: $gray;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+  &:hover{
+    transition: all .25s ease;
+  }
+}
+
+button:not(:disabled),
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled) {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+:foucs, :active{
+  outline: none;
+  outline:0;
+  box-shadow:none;
+}
+button{
+  &:focus,
+  &:active{
+    outline:0;
+    outline: none;
+  }
+}
+.form-control{
+  &:focus,
+  &:active{
+    outline:0;
+    outline: none;
+    box-shadow:none;
+    border:1px solid $gray;
+  }
+  &.dashed{
+    border:1px dashed $base;
+  }
+}
+
+input[type=radio],
+input[type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+.form-group{
+  
+}
+
+input.form-control{
+  width: 100%;
+  padding:0 15px;
+  font-weight: 500;
+  color: $hlgt;
+  font-size: 18.22px;
+  border-radius:0;  
+  height: 41px;
+  line-height: 41px;
+  border:1px solid rgba($gray, .25);
+  &.error{
+    color:$red;
+    border:1px solid $red;
+  }
+  &.valid{
+    border:1px solid $green;
+  }
+  &.searchIcon{
+    background: $white url('../icon/icon-search-green.png') no-repeat 96% center;
+  }
+}
+label{
+  &.error{
+    font-size:12.22px;
+    color:$red;
+  }
+}
+.lblHead{
+  position:absolute;
+  height: 1px;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+.formBtn{
+  border-radius: 4px;
+  font-size: 14px;
+  letter-spacing: .25px;
+  padding: 12px 24px;
+  text-align: center;
+  transition: all .25s ease;
+  color: $silver;
+  min-width: 126px;
+  display: inline-block;
+  background:$base;
+  text-transform: capitalize;
+  border:1px solid transparent;
+  &.fullWidth{
+    width: 100%;
+  }
+  &:hover{
+    background: $black;
+    color: $white;
+  }
+  &.trasBtn{
+    border:1px solid rgba($gray, .25);
+    color: $base;
+    background:$white;
+    &:hover{
+      background:$silver;
+    }
+  }
+}
+.scrollTabs{
+  display: inline-block;
+  width: 100%;
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+    background: transparent;
+  }
+}
+.groupButtonSet{
+  border:1px solid $silver;
+  border-radius:0;
+  display: inline-flex;
+  flex-direction: row;
+  align-items:center;
+  background-color: $white;
+  li{
+    display: inline-block;
+    a{
+      display: block;
+      font-weight: 500;
+      padding:10px 24px;
+      &:hover{
+        opacity: .75;
+      }
+    }
+    &:first-child{
+      a{
+        background-color:$gray;
+        color:$baseBg;
+      }
+    }
+  }
+}
+.tabsButtonSet{
+  border:1px solid $silver;
+  border-radius:0;
+  display: inline-flex;
+  flex-direction: row;
+  background-color: $white;
+  overflow: hidden;
+  li{
+    color: $base;
+    font-size: 14.22px;
+    font-weight: 400;
+    padding:10px 25px;
+    border-right:1px solid $silver;
+    cursor: pointer;
+    white-space: nowrap;
+    &.active{
+      background-color:$gray;
+      color: $baseBg;
+    }
+    &:hover{
+      opacity: .75;
+    }
+    &:last-child{
+      border-right:0;
+    }
+  }
+  &.noStyle{
+    background:transparent;
+    border:0;
+    li{
+      padding:10px 0;
+      border:0;
+      background:transparent;
+      margin-right: 15px;
+      position:relative;
+      &:last-child{
+        margin-right: 0;
+      }
+      &:hover{
+        opacity: 1;
+      }
+      &:after{
+         width: 0;
+         height: 1px;
+         bottom:8px;
+         background:$base;
+      }
+      &.active{
+        color: $base;
+        &:after{
+           width: 100%;
+        }
+      }
+    }
+  }
+}
+.listButton{
+  display: inline-flex;
+  .linkBtn{
+      border-radius: 2px;
+      font-weight: 500;
+      padding:15px 20px;
+      position: relative;
+      transition: all .25s ease;
+      top: 0;
+      background:$base;
+      color: $white;
+      &:hover{
+        top: -5px;
+        box-shadow:0 0 15px rgba($base, .2);
+      }
+      &.base{
+        background: $base;
+        color: $baseBg;
+      }
+      &.white{
+        background: $white;
+        color: $base;
+      }
+      &.whiteShadow{
+        background: $white;
+        color: $base;
+        box-shadow:0 0 5px rgba($base, .2);
+      }
+      &.green{
+        background-color:$green;
+        color: $baseBg;
+      }
+      &.fullWidth{
+        width: 100%;
+      }
+  }
+  &.fullWrap{
+    display: flex;
+    flex-direction: column;
+    a{
+      width: 100%;
+    }
+  }
+}
+.wrapDate{
+  position: relative;
+  width: 100%;
+  height: 40px;
+  overflow: hidden;  
+  .date{   
+    height: 100%;
+    height: 40px;
+    line-height: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .picker {
+    width: 100%;
+    height: 100%;
+    font-size: 999px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+  }
+}
+//================== START CODE FOR RADIO LIST HERE ===================================
+.radioList{
+  &.inline{
+    display:inline;
+  }
+  li{
+    margin-right:15px;
+    &:last-child{
+      margin-right:0;
+    }
+  }
+}
+.cstmRadio{
+  margin:4px 0;
+  position:relative;
+  input[type="radio"] + label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding:6px 6px 6px 25px;
+    margin-right: 15px;
+    font-size: 13.88px;
+    font-weight:500;
+    &:before {
+      content: "";  
+      display: block;
+      width: 18px;
+      height: 18px;
+      margin-right: 14px;
+      position: absolute;
+      top: 4px;
+      left: 0;
+      border: 1px solid $gray;
+      background-color: $white;
+      border-radius: 50%;
+    }
+  }
+  
+  input[type="radio"] {
+    display: none !important;
+    *display: inline;
+    &:checked + label{
+      &:before{
+        background-color:$base;
+        border: 1px solid transparent;
+      }
+      &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 8px;
+        left: 4px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $green;
+      }
+    }
+  }
+}
+
+
+.inRadio{
+  cursor: pointer;
+  font-size: 12.88px;
+  padding-left: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
+  position:relative;
+  font-weight: 500;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .checkRadio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: rgba($gray, .5);
+    border-radius: 50%;
+    &:after{
+      content: "";
+      position: absolute;
+      display: none;
+    }
+  }
+  &:hover input ~ .checkRadio{
+    background-color: $gray;
+  }
+  input:checked ~ .checkRadio {
+    background-color: $green;
+  }
+  input:checked ~ .checkRadio:after {
+    display: block;
+  }
+  .checkRadio:after {
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $white;
+  }
+}
+//----------- start code for in check here  ------------
+.inCheck{
+  cursor: pointer;
+  font-size: 12.88px;
+  padding-left: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
+  position:relative;
+  font-weight: 500;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .checkme {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: rgba($gray, .5);
+    border-radius: 50%;
+    &:after{
+      content: "";
+      position: absolute;
+      display: none;
+    }
+  }
+  &:hover input ~ .checkme{
+    background-color: $gray;
+  }
+  input:checked ~ .checkme {
+    background-color: $green;
+  }
+  input:checked ~ .checkme:after {
+    display: block;
+  }
+  .checkme:after {
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $white;
+  }
+}
+//================== END CODE FOR RADIO LIST HERE =====================================
+.smallFormDisp{
+  .form-control{
+    height: 38px;
+      line-height: 39px;
+      padding:0 14px;
+      &.dashed{
+        border:1px dashed $base;
+      }
+  }
+}
+.smallBtnSubmit{
+  border:0;
+  border-radius: 3px;
+  font-size:12.22px;
+  display:inline-block;
+  height: 38px;
+  line-height: 39px;
+  font-weight: 600;
+  text-align:center;
+  letter-spacing:0.033em;
+  &.base{
+    background:$base;
+    color:$silver;
+  }
+  &.black{
+    background:$base;
+    color:$silver;
+  }
+  &.fullWidth{
+    width: 100%;    
+  }
+}
+.btnsWrap{
+  .btnLink,
+  .smallBtnLink{
+    margin-right:10px;
+    background:transparent;
+    position:relative;
+    &:after{
+      bottom:8px;
+      width: 100%;
+      height: 1px;
+      background:$base;
+    }
+    &:last-child{
+      margin-right:0;
+    }
+  }
+}
+.btnLink{
+  border-radius:0;
+  font-size:16px;
+  font-weight:600;
+  height:50px;
+  line-height:50px;
+  cursor:pointer;
+  transition: all .25s ease;
+  position:relative;
+  overflow:hidden;
+  display:inline-block;
+  min-width:180px;
+  max-width:290px;
+  text-align:center;
+  padding:0 20px;
+  border:1px solid transparent; 
+  span{
+    position: relative;
+    padding-right:10px;
+    i{
+      font-size: 14px;
+      position:absolute;
+      right:0;
+      top:40%;
+        border: solid $white;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 2px;
+        transition:all .25s ease;
+         transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        &.white{
+          border-color:$white;
+        }
+    }
+  }
+  &.fullWidth{
+    display: block;
+    width:100%;
+  }
+  &.whiteBg{
+    background-color:$white;
+  }
+  &.green{
+    color:$green;
+    i{
+      border-color:$green;
+    }
+  }
+  &.transGreen{
+    background:none;
+    border-color:$green;
+    color:$green;
+    i{
+      border-color:$green;
+    }
+  }
+  &.transSlate{
+    background:none;
+    border-color:$gray;
+    color:$gray;
+    i{
+      border-color:$gray;
+    }
+  }
+  &.gradBg{
+    color:$silver;
+    background: $green;
+    i{
+      border-color:$silver;
+    }
+    &:hover{
+      background: $green;
+    }
+  }
+  &:hover{
+    box-shadow:0 0 20px rgba($base, .25);
+    span{
+      i{
+        right:-15px;
+      }
+    }
+  }
+}
+.smallBtnLink{
+  font-size:12.22px;
+  display:inline-block;
+  padding:8px 0;
+  height: auto;
+  line-height: 1.25;
+  font-weight: 600;
+  &.green{
+    color:$green;
+  }
+}
+.textLinkBtn{
+  font-size:12.22px;
+  display:inline-block;
+  padding:0;
+  height: auto;
+  line-height: 1;
+  font-weight: 500;
+}
+.inlineShippingFrm{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:center;
+  margin: 5px 0;
+}

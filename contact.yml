@@ -1,0 +1,7 @@
+models:
+  ContactUs :
+    full_name: string:100
+    email: string:50
+    mobile: string:100
+    message: longtext
+    status: nullable string:255
